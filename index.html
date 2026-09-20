@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Krishna Malhotra - Portfolio</title>
+    <title>Krishna Malhotra | Applied AI and Full-Stack Developer</title>
+    <meta name="description" content="Portfolio of Krishna Malhotra, an applied AI and full-stack developer building production-oriented AI, web, media, and creator platforms.">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -85,84 +86,68 @@
         // --- DATA ---
         const PROJECTS = [
           {
-            id: 1, title: "Threat Recognition System", type: "AI + Security",
-            overview: "An AI-driven security system focused on detecting potential threats such as violence or weapons in visual feeds. Intended for surveillance, monitoring, and rapid-response environments.",
-            capabilities: "Image/video-based threat detection • Real-time or near-real-time inference • Alert-oriented system design • Security-focused ML workflow",
-            tech: "Python, Machine Learning, Computer Vision, OpenCV, Web frontend components",
-            github: "https://github.com/i-krishnamalhotra/Threat-Recognition-System",
-            gradient: "from-amber-500 to-orange-900"
+            id: 1, title: "KAOSLY AI", type: "Applied AI Platform",
+            overview: "A cross-platform AI workspace for web and Windows desktop with multi-provider chat, agent workflows, scoped file tools, previews, and approval-gated execution.",
+            capabilities: "Provider-normalized chat and tool calls • Agent planning and execution • Approval policies • Browser sandbox and native desktop boundaries • 294 automated tests",
+            tech: "TypeScript, React, Tauri, AI provider APIs, Vitest",
+            github: "https://github.com/itskrishnamalhotra-stack/kaosly-ai-source",
+            gradient: "from-slate-700 to-indigo-950"
           },
           {
-            id: 2, title: "Consistent Characters AI – Fashion Character Designer", type: "Fashion Character Designer",
-            overview: "An experimental AI workflow focused on generating style-consistent characters for fashion and concept design across multiple generations.",
-            capabilities: "Consistent character generation • Fashion-focused prompt engineering • Image-to-image and re-face pipelines",
-            tech: "Python, Generative AI, Diffusion-based image models, Prompt engineering",
-            github: "https://github.com/i-krishnamalhotra/Consistent-Characters-AI-AI-Powered-Fashion-Character-Designer",
-            gradient: "from-pink-500 to-rose-900"
+            id: 2, title: "KAOSLY Creator Platform", type: "Founder Product",
+            overview: "A creator-focused social platform developed from late 2025 and continued under Chaotic Tech Private Limited, spanning publishing, media, communities, messaging, monetisation, and safety workflows.",
+            capabilities: "129 application and API routes • Algorithmic feeds • WebRTC live experiences • Payments and payouts • Four Gemini and Genkit AI flows • PWA and Android TWA delivery",
+            tech: "Next.js 15, TypeScript, React, Firebase, Firestore, Genkit, WebRTC, Cashfree",
+            github: "https://github.com/itskrishnamalhotra-stack/KAOSLY-Case-Study",
+            gradient: "from-violet-600 to-fuchsia-950"
           },
           {
-            id: 3, title: "Multi-Character Dialogue Lip-Sync Engine", type: "Advanced / Research-Level",
-            overview: "A highly advanced video-processing and AI pipeline that enables accurate lip-syncing for multiple characters simultaneously in a single video. The project overcomes the core limitation of traditional lip-sync models (single-face only) by introducing face tracking, identity persistence, and per-character inference.",
-            capabilities: "Detects and tracks multiple faces across video frames • Uses IoU-based face tracking with temporal smoothing to prevent jitter • Runs independent Wav2Lip inference for each detected character • Re-composites outputs using feathered blending for seamless results",
-            tech: "Python, OpenCV, face_recognition, Wav2Lip, MoviePy, Computer Vision & Video Processing",
-            github: "https://github.com/i-krishnamalhotra/Multi-Character-Dialogue-Lip-Sync-Engine",
-            gradient: "from-blue-600 to-indigo-900"
+            id: 3, title: "Dolphin Waterpark Operations", type: "Full-Stack Case Study",
+            overview: "A private operational platform designed for QR ticketing, point of sale, rentals, coupons, staff workflows, and reporting.",
+            capabilities: "QR ticket validation • Point-of-sale workflows • Rental and coupon management • Staff operations • Reporting",
+            tech: "Next.js, TypeScript, Firebase, Full-stack product design",
+            github: "https://github.com/itskrishnamalhotra-stack/Dolphin-Waterpark-Case-Study",
+            gradient: "from-cyan-500 to-blue-900"
           },
           {
-            id: 4, title: "AI-Powered Talking Avatar Generator", type: "Complex AI Pipeline",
-            overview: "A modular, GPU-aware AI pipeline that converts a static image and audio input into a high-quality talking avatar video. The system is split into multiple execution stages to handle hardware constraints and ensure output continuity.",
-            capabilities: "Audio transcription using Whisper • Prompt generation for visual continuity using LLMs • AI-based video generation via ComfyUI • Accurate lip-sync using Wav2Lip • Optional video enhancement and upscaling",
-            tech: "Python, Whisper (Speech-to-Text), Generative AI (LLMs), ComfyUI, Wav2Lip, Real-ESRGAN",
-            github: "https://github.com/i-krishnamalhotra/AI-Powered-Talking-Avatar-Generator",
-            gradient: "from-emerald-500 to-teal-900"
-          },
-          {
-            id: 5, title: "Fully Automated AI YouTube Shorts Creator & Uploader", type: "Automation System",
-            overview: "An end-to-end automation system designed to create and upload YouTube Shorts without manual intervention. The pipeline handles scripting, visuals, voiceovers, and publishing logic.",
-            capabilities: "Automated script and content generation • AI-generated visuals and voiceovers • Video assembly for short-form platforms • Designed for scalable content production",
-            tech: "Python, Generative AI, Video processing tools, YouTube API, Automation pipelines",
-            github: "https://github.com/i-krishnamalhotra/Fully-Automated-AI-YouTube-Shorts-Creator-Uploader",
-            gradient: "from-rose-500 to-red-900"
-          },
-          {
-            id: 6, title: "UniConnect – University Management System", type: "Full-Stack System",
-            overview: "A full-stack university management platform centralizing academic content, assignments, resources, and communication for students, faculty, and administrators.",
-            capabilities: "Role-based access (student, teacher, admin) • Study material and assignment management • Community and communication features • Designed for institutional scalability",
-            tech: "Python, HTML, CSS, JavaScript, Database systems, Web application architecture",
-            github: "https://github.com/i-krishnamalhotra/UniConnect-university-management-system",
+            id: 4, title: "UniConnect University Management System", type: "Full-Stack System",
+            overview: "A role-based university management prototype covering attendance, assignments, academic resources, timetables, and student-teacher communication.",
+            capabilities: "Student, teacher, and admin roles • Attendance and assignments • Academic resources • Timetables • Communication workflows",
+            tech: "Python, Flask, SQLite, JavaScript, HTML, CSS",
+            github: "https://github.com/itskrishnamalhotra-stack/UniConnect-university-management-system",
             gradient: "from-violet-500 to-purple-900"
           },
           {
-            id: 7, title: "AI Fashion Designing Application", type: "Prototype Application",
-            overview: "A prototype application for AI-assisted fashion design, enabling rapid creation of apparel concepts and visual mockups.",
-            capabilities: "Rapid apparel concept generation • AI-assisted visual mockups • Design ideation workflows",
-            tech: "Python, Generative AI, Image synthesis models, Notebook-based workflows",
-            github: "https://github.com/i-krishnamalhotra/AI-Fashion-Designing-Application",
-            gradient: "from-fuchsia-500 to-purple-800"
+            id: 5, title: "Threat Recognition System", type: "Computer Vision",
+            overview: "A video-analysis prototype for weapon and violence recognition with incident review through a Flask dashboard.",
+            capabilities: "Video analysis • Threat-oriented recognition • Incident review workflow • Flask dashboard",
+            tech: "Python, Flask, OpenCV, Machine Learning, Computer Vision",
+            github: "https://github.com/itskrishnamalhotra-stack/Threat-Recognition-System",
+            gradient: "from-amber-500 to-orange-900"
           },
           {
-            id: 8, title: "Home Automation System", type: "Hardware & AI Prototype",
-            overview: "A Python-based smart home automation prototype featuring GUI control, experimental face-login authentication, and speech-recognition-driven commands.",
-            capabilities: "Smart home GUI control • Experimental face-login authentication • Speech-recognition driven commands",
-            tech: "Python, GUI frameworks, Speech Recognition, Basic security concepts",
-            github: "https://github.com/i-krishnamalhotra/home_automation",
-            gradient: "from-cyan-500 to-blue-800"
+            id: 6, title: "Multi-Character Dialogue Lip-Sync Engine", type: "Computer Vision Pipeline",
+            overview: "A video pipeline for lip-syncing multiple characters through face tracking, identity persistence, per-character inference, and compositing.",
+            capabilities: "Multi-face detection and tracking • Temporal smoothing • Per-character Wav2Lip inference • Feathered compositing",
+            tech: "Python, OpenCV, face_recognition, Wav2Lip, MoviePy",
+            github: "https://github.com/itskrishnamalhotra-stack/Multi-Character-Dialogue-Lip-Sync-Engine",
+            gradient: "from-blue-600 to-indigo-900"
           },
           {
-            id: 9, title: "PDF to Audio Web App", type: "Utility App",
-            overview: "A lightweight application that converts PDF documents into spoken audio, improving accessibility and ease of content consumption.",
-            capabilities: "Document parsing • Text-to-speech conversion • Accessible content consumption",
-            tech: "Python, PDF parsing, Text-to-Speech (TTS), Jupyter Notebooks",
-            github: "https://github.com/i-krishnamalhotra/PDF-to-Audio-Web-App",
-            gradient: "from-lime-500 to-emerald-800"
+            id: 7, title: "AI-Powered Talking Avatar Generator", type: "Generative Media Pipeline",
+            overview: "A staged, GPU-aware workflow that converts a portrait and audio recording into a talking-avatar video.",
+            capabilities: "Whisper transcription • Prompt-driven video generation • Wav2Lip synchronization • Optional enhancement and upscaling",
+            tech: "Python, Whisper, ComfyUI, Wav2Lip, Real-ESRGAN",
+            github: "https://github.com/itskrishnamalhotra-stack/AI-Powered-Talking-Avatar-Generator",
+            gradient: "from-emerald-500 to-teal-900"
           },
           {
-            id: 10, title: "College Website – Study Material Platform", type: "Web Development",
-            overview: "A Python-based academic website for hosting and managing college study materials, built with backend logic, templates, and static assets.",
-            capabilities: "Study material hosting • Backend routing and logic • Static asset management",
-            tech: "Python, HTML, CSS, Database handling, Backend web frameworks",
-            github: "https://github.com/i-krishnamalhotra/college_website_study_material",
-            gradient: "from-sky-400 to-indigo-800"
+            id: 8, title: "Automated AI YouTube Shorts Pipeline", type: "AI Automation",
+            overview: "An end-to-end workflow for scripting, voice generation, media assembly, subtitles, metadata, and automated YouTube publishing.",
+            capabilities: "AI scripting and metadata • Voice and music generation • FFmpeg assembly • Whisper subtitles • YouTube API publishing",
+            tech: "Python, Gemini, Whisper, FFmpeg, MoviePy, YouTube Data API",
+            github: "https://github.com/itskrishnamalhotra-stack/Fully-Automated-AI-YouTube-Shorts-Creator-Uploader",
+            gradient: "from-rose-500 to-red-900"
           }
         ];
 
@@ -699,32 +684,51 @@
                       <h2 className="font-bold text-sm sm:text-base flex items-center gap-1">
                         Krishna Malhotra <CheckCircle2 className="w-4 h-4 text-blue-500" />
                       </h2>
-                      <p className="text-sm text-zinc-600 dark:text-zinc-400">Engineer</p>
+                      <p className="text-sm text-zinc-600 dark:text-zinc-400">Applied AI and Full-Stack Developer</p>
                       <p className="text-sm mt-1 whitespace-pre-line leading-relaxed">
-                        🚀 AI Engineer | Automation Builder | System Designer<br/>
-                        💻 Full-Stack Development & Advanced Computer Vision<br/>
-                        🔬 Building production-ready intelligent pipelines.
+                        Founder, Chaotic Tech Private Limited • Building KAOSLY<br/>
+                        MCA, USICT GGSIPU • BCA with 7.81/10 CGPA<br/>
+                        Python, TypeScript, Next.js, Firebase and applied AI
                       </p>
-                      <a href="https://github.com/i-krishnamalhotra" target="_blank" rel="noreferrer" className="text-sm text-blue-600 dark:text-blue-400 font-medium hover:underline flex items-center gap-1 mt-1">
-                        <LinkIcon className="w-3 h-3" /> github.com/i-krishnamalhotra
-                      </a>
+                      <div className="flex flex-wrap gap-x-4 gap-y-1 mt-1">
+                        <a href="https://github.com/itskrishnamalhotra-stack" target="_blank" rel="noreferrer" className="text-sm text-blue-600 dark:text-blue-400 font-medium hover:underline flex items-center gap-1">
+                          <LinkIcon className="w-3 h-3" /> GitHub
+                        </a>
+                        <a href="https://www.linkedin.com/in/i-krishna-malhotra/" target="_blank" rel="noreferrer" className="text-sm text-blue-600 dark:text-blue-400 font-medium hover:underline flex items-center gap-1">
+                          <LinkIcon className="w-3 h-3" /> LinkedIn
+                        </a>
+                      </div>
                     </div>
 
                     {/* Primary Call To Action Buttons */}
-                    <div className="flex gap-2 mb-4">
+                    <div className="grid grid-cols-2 gap-2 mb-4">
                       <a 
                         href={hireMeLink}
                         target="_blank"
                         rel="noreferrer"
-                        className="flex-1 bg-zinc-900 text-white dark:bg-white dark:text-black font-semibold text-sm py-1.5 rounded-lg hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-colors flex items-center justify-center text-center"
+                        className="bg-zinc-900 text-white dark:bg-white dark:text-black font-semibold text-sm py-2 rounded-lg hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-colors flex items-center justify-center text-center"
                       >
                         Hire Me
                       </a>
                       <a 
-                        href="https://github.com/i-krishnamalhotra" target="_blank" rel="noreferrer"
-                        className="flex-1 bg-zinc-100 text-zinc-900 dark:bg-zinc-800 dark:text-zinc-100 font-semibold text-sm py-1.5 rounded-lg hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors flex items-center justify-center text-center"
+                        href="https://github.com/itskrishnamalhotra-stack" target="_blank" rel="noreferrer"
+                        className="bg-zinc-100 text-zinc-900 dark:bg-zinc-800 dark:text-zinc-100 font-semibold text-sm py-2 rounded-lg hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors flex items-center justify-center text-center"
                       >
                         View GitHub
+                      </a>
+                      <a
+                        href="./Krishna_Malhotra_Applied_AI_Resume.pdf"
+                        download
+                        className="bg-blue-50 text-blue-700 dark:bg-blue-950/40 dark:text-blue-300 font-semibold text-sm py-2 rounded-lg hover:bg-blue-100 dark:hover:bg-blue-900/50 transition-colors flex items-center justify-center gap-1.5 text-center"
+                      >
+                        <FileText className="w-4 h-4" /> AI Resume
+                      </a>
+                      <a
+                        href="./Krishna_Malhotra_Full_Stack_Resume.pdf"
+                        download
+                        className="bg-blue-50 text-blue-700 dark:bg-blue-950/40 dark:text-blue-300 font-semibold text-sm py-2 rounded-lg hover:bg-blue-100 dark:hover:bg-blue-900/50 transition-colors flex items-center justify-center gap-1.5 text-center"
+                      >
+                        <FileText className="w-4 h-4" /> Full Stack Resume
                       </a>
                     </div>
                   </section>
