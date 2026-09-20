@@ -56,6 +56,7 @@
         const Briefcase = (p) => <svg viewBox="0 0 24 24" {...IconProps} {...p}><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>;
         const Award = (p) => <svg viewBox="0 0 24 24" {...IconProps} {...p}><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>;
         const FileText = (p) => <svg viewBox="0 0 24 24" {...IconProps} {...p}><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>;
+        const Download = (p) => <svg viewBox="0 0 24 24" {...IconProps} {...p}><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>;
         const Play = (p) => <svg viewBox="0 0 24 24" {...IconProps} {...p} fill={p.fill || "none"}><polygon points="5 3 19 12 5 21 5 3"/></svg>;
         const X = (p) => <svg viewBox="0 0 24 24" {...IconProps} {...p}><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>;
         const Music = (p) => <svg viewBox="0 0 24 24" {...IconProps} {...p}><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>;
@@ -149,6 +150,11 @@
             github: "https://github.com/itskrishnamalhotra-stack/Fully-Automated-AI-YouTube-Shorts-Creator-Uploader",
             gradient: "from-rose-500 to-red-900"
           }
+        ];
+
+        const RESUMES = [
+          { id: 'ai', title: 'Applied AI Resume', image: 'Krishna_Malhotra_Applied_AI_Resume_Preview.png', pdf: 'Krishna_Malhotra_Applied_AI_Resume.pdf' },
+          { id: 'full-stack', title: 'Full Stack Resume', image: 'Krishna_Malhotra_Full_Stack_Resume_Preview.png', pdf: 'Krishna_Malhotra_Full_Stack_Resume.pdf' }
         ];
 
         // Mapped with expected image filenames based on instructions
@@ -330,6 +336,7 @@
           const touchStartTime = useRef(0);
           
           const [activeCredential, setActiveCredential] = useState(null); // Holds clicked credential for image modal
+          const [activeResume, setActiveResume] = useState(null);
           
           // Swipe implementation variables for Main Tabs
           const [touchStartX, setTouchStartX] = useState(null);
@@ -606,6 +613,37 @@
                 </div>
               )}
 
+              {/* RESUME PREVIEW MODAL */}
+              {activeResume && (
+                <div className="fixed inset-0 z-[120] bg-black/95 backdrop-blur-sm overflow-y-auto animate-in fade-in duration-200">
+                  <div className="sticky top-0 z-20 bg-zinc-950/95 backdrop-blur-md border-b border-white/10 px-3 sm:px-6 py-3 flex items-center gap-2 sm:gap-4">
+                    <h2 className="text-white font-bold text-sm sm:text-lg truncate flex-1">{activeResume.title}</h2>
+                    <a
+                      href={`./${activeResume.pdf}`}
+                      download
+                      className="bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs sm:text-sm px-3 sm:px-4 py-2 rounded-lg transition-colors flex items-center gap-1.5 whitespace-nowrap"
+                    >
+                      <Download className="w-4 h-4" /> Download PDF
+                    </a>
+                    <button
+                      type="button"
+                      aria-label="Close resume preview"
+                      onClick={() => setActiveResume(null)}
+                      className="text-white p-2 hover:bg-white/20 rounded-full transition-colors"
+                    >
+                      <X className="w-6 h-6" />
+                    </button>
+                  </div>
+                  <div className="min-h-full px-2 sm:px-6 py-4 sm:py-8 flex justify-center">
+                    <img
+                      src={`./${activeResume.image}`}
+                      alt={`${activeResume.title} preview`}
+                      className="w-full max-w-4xl h-auto self-start rounded-sm shadow-2xl"
+                    />
+                  </div>
+                </div>
+              )}
+
               {/* CREDENTIAL IMAGE MODAL (Full Screen Overlay) */}
               {activeCredential && (
                 <div className="fixed inset-0 z-[110] bg-black/95 backdrop-blur-sm flex flex-col items-center justify-center animate-in fade-in zoom-in-95 duration-200 p-4 sm:p-8">
@@ -716,20 +754,20 @@
                       >
                         View GitHub
                       </a>
-                      <a
-                        href="./Krishna_Malhotra_Applied_AI_Resume.pdf"
-                        download
+                      <button
+                        type="button"
+                        onClick={() => setActiveResume(RESUMES[0])}
                         className="bg-blue-50 text-blue-700 dark:bg-blue-950/40 dark:text-blue-300 font-semibold text-sm py-2 rounded-lg hover:bg-blue-100 dark:hover:bg-blue-900/50 transition-colors flex items-center justify-center gap-1.5 text-center"
                       >
                         <FileText className="w-4 h-4" /> AI Resume
-                      </a>
-                      <a
-                        href="./Krishna_Malhotra_Full_Stack_Resume.pdf"
-                        download
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => setActiveResume(RESUMES[1])}
                         className="bg-blue-50 text-blue-700 dark:bg-blue-950/40 dark:text-blue-300 font-semibold text-sm py-2 rounded-lg hover:bg-blue-100 dark:hover:bg-blue-900/50 transition-colors flex items-center justify-center gap-1.5 text-center"
                       >
                         <FileText className="w-4 h-4" /> Full Stack Resume
-                      </a>
+                      </button>
                     </div>
                   </section>
 
